@@ -1,8 +1,8 @@
 name       : tootle
 version    : 0.1.5
-release    : 3
+release    : 4
 source     :
-    - git|https://github.com/bleakgrey/tootle.git : 7b3dbfe7e6aba5f39366ae8e310c965dfd6aa148
+    - git|https://github.com/bleakgrey/tootle.git : f88057b33a79dc5c37f541d14dced08fc759e3f5
 license    : GPL-3.0-or-later
 summary    : GTK+ client for Mastodon
 component  : network.clients
