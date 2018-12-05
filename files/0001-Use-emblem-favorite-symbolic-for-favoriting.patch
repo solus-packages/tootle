@@ -1,0 +1,39 @@
+From ca112b1bee3c537e861ccd5da7a845c1bf876f3e Mon Sep 17 00:00:00 2001
+From: Joshua Strobl <joshua@stroblindustries.com>
+Date: Wed, 5 Dec 2018 09:33:39 +0200
+Subject: [PATCH 1/1] Use emblem-favorite-symbolic for favoriting.
+
+---
+ src/API/NotificationType.vala | 2 +-
+ src/Widgets/StatusWidget.vala | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/API/NotificationType.vala b/src/API/NotificationType.vala
+index 53598b5..6c12b5b 100644
+--- a/src/API/NotificationType.vala
++++ b/src/API/NotificationType.vala
+@@ -71,7 +71,7 @@ public enum Tootle.NotificationType {
+             case REBLOG:
+                 return "media-playlist-repeat-symbolic";
+             case FAVORITE:
+-                return "help-about-symbolic";
++                return "emblem-favorite-symbolic";
+             case FOLLOW:
+             case FOLLOW_REQUEST:
+                 return "contact-new-symbolic";
+diff --git a/src/Widgets/StatusWidget.vala b/src/Widgets/StatusWidget.vala
+index 092072d..b5327db 100644
+--- a/src/Widgets/StatusWidget.vala
++++ b/src/Widgets/StatusWidget.vala
+@@ -86,7 +86,7 @@ public class Tootle.StatusWidget : Gtk.EventBox {
+             if (reblog.sensitive)
+                 this.status.get_formal ().set_reblogged (reblog.get_active ());
+         });
+-        favorite = new ImageToggleButton ("help-about-symbolic");
++        favorite = new ImageToggleButton ("emblem-favorite-symbolic");
+         favorite.set_action ();
+         favorite.tooltip_text = _("Favorite");
+         favorite.toggled.connect (() => {
+-- 
+2.19.2
+

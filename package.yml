@@ -1,6 +1,6 @@
 name       : tootle
 version    : 0.2.0
-release    : 5
+release    : 6
 source     :
     - https://github.com/bleakgrey/tootle/archive/0.2.0.tar.gz : e83c4a0539bf7b4b9d2b81d036ee0e8a69564b11c70f77ded5091955a89d2737
 license    : GPL-3.0-or-later
@@ -15,6 +15,7 @@ builddeps  :
     - pkgconfig(libsoup-2.4)
     - vala
 setup      : |
+    %patch -p1 < $pkgfiles/0001-Use-emblem-favorite-symbolic-for-favoriting.patch
     %meson_configure
 build      : |
     %ninja_build
